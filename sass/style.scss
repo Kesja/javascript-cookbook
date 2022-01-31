@@ -69,6 +69,7 @@ body {
     padding: 40px;
     border: 1px solid $color-dark;
     border-radius: 5px;
+    height: 70vh;
 }
 
 /* Logo */
@@ -109,11 +110,21 @@ body {
 
 /* Post */
 
+.posts {
+    position: relative;
+}
+
 .post {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s all ease-in;
+    z-index: 1;
+    margin: 0 30px auto auto;
 
     &.active {
+        position: absolute;
         display: block;
+        opacity: 1;
     }
 }
 
