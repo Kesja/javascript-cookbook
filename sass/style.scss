@@ -6,11 +6,11 @@ $color-light: #fff;
 $color-dark: #444;
 
 $font-logo: 'Sacramento',
-  cursive;
+cursive;
 $font-header: 'Oswald',
-  sans-serif;
+sans-serif;
 $font-text: 'Source Sans Pro',
-  sans-serif;
+sans-serif;
 
 /* Global */
 
@@ -110,21 +110,11 @@ body {
 
 /* Post */
 
-.posts {
-  position: relative;
-}
-
 .post {
-  position: absolute;
-  opacity: 0;
-  transition: 0.2s all ease-in;
-  z-index: 1;
-  margin: 0 30px auto auto;
+  display: none;
 
   &.active {
-    position: absolute;
     display: block;
-    opacity: 1;
   }
 }
 
