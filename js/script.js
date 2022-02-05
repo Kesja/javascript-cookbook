@@ -145,12 +145,12 @@ function generateTags(){
   for (let tag in allTags) {
     const tagLink = '<li><a href="#tag-' + tag + '" class="'+ calculateTagClass(allTags[tag], tagsParams) + '"><span>' + tag  + '</span></a></li>';
     /* [NEW] generate code of a link and add it to allTagsHTML */
-    allTagsHTML += tagLink + '(' + allTags[tag] + ')';
+    allTagsHTML += tagLink;
   /* [NEW] END LOOP: for each tag in allTags */
   }
   /* [NEW] add html from allTagsHTML to tagList */
   tagList.innerHTML = allTagsHTML;
-  console.log('DUPA', tagList);
+  console.log(tagList);
 }
 generateTags();
 
