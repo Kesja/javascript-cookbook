@@ -104,7 +104,7 @@ body {
 
 .authors {
   li {
-    margin-bottom: 12px;
+    /*margin-bottom: 12px;*/
   }
 }
 
@@ -138,24 +138,25 @@ a {
 
 .tags li {
   display: inline-block;
+  padding-right: 10px;
 
   .tag-size-5 {
-    font-size: 40px;
+    font-size: 35px;
     color: #AF7AC5;
   }
 
   .tag-size-4 {
-    font-size: 35px;
+    font-size: 30px;
     color: #5499C7;
   }
 
   .tag-size-3 {
-    font-size: 30px;
+    font-size: 25px;
     color: #58D68D;
   }
 
   .tag-size-2 {
-    font-size: 25px;
+    font-size: 22px;
     color: #5D6D7E;
   }
 

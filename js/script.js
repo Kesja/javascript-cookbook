@@ -35,6 +35,7 @@ const optArticleAuthorSelector = '.post-author';
 const optTagsListSelector = '.tags.list';
 const optCloudClassCount = 5;
 const optCloudClassPrefix = 'tag-size-';
+const optAuthorsListSelector = '.authors.list';
 
 function generateTitleLinks(customSelector = ''){
   /* remove contents of titleList */
@@ -157,7 +158,7 @@ generateTags();
 function tagClickHandler(event){
   /* prevent default action for this event */
   event.preventDefault();
-  /*  !!!!!!  make new constant named "clickedElement" and give it the value of "this" */
+  /* make new constant named "clickedElement" and give it the value of "this" */
   const clickedElement = this;
   /* make a new constant "href" and read the attribute "href" of the clicked element */
   const href = clickedElement.getAttribute('href');
@@ -198,16 +199,35 @@ function addClickListenersToTags(){
 addClickListenersToTags();
 
 function generateAuthors() {
+  let allAuthors = {};
   const articles = document.querySelectorAll(optArticleSelector);
   for (let article of articles) {
     const authorWrapper = article.querySelector(optArticleAuthorSelector);
     let html = '';
     const articleAuthor = article.getAttribute('data-author');
+    console.log(articleAuthor);
     const authorLink = '<a href="#author-' + articleAuthor + '"><span>' + articleAuthor + '</span></a>';
     html = html + authorLink;
-  
+    
+    if(!allAuthors.hasOwnProperty(authorLink)) {
+      allAuthors[authorLink] = 1;
+    } else {
+      allAuthors[authorLink]++;
+    }
+
     authorWrapper.insertAdjacentHTML('beforeend', html);
   }
+  
+  const authorList = document.querySelector(optAuthorsListSelector);
+  
+  let allAuthorsHTML = '';
+
+  for(let author in allAuthors) {
+    const authorLink = author;
+    allAuthorsHTML += authorLink  + '('+ allAuthors[author] +')';
+  } 
+  authorList.innerHTML = allAuthorsHTML;
+  console.log('!', authorList);
 }
 generateAuthors();
 
@@ -224,7 +244,7 @@ function authorClickHandler(event) {
   for ( let targetLink of targetLinks) {
     targetLink.classList.add('active');
   }
-  generateTitleLinks('[data-author="' + author + '"]');
+  generateTitleLinks('[data-author="' + author+ '"]');
 }
 
 function addClickListenersToAuthors() {
