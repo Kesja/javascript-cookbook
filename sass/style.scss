@@ -96,6 +96,7 @@ body {
 .list-horizontal {
   li {
     display: inline-block;
+    padding-right: 5px;
   }
 }
 
@@ -105,6 +106,10 @@ body {
   li {
     margin-bottom: 12px;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 /* Post */
@@ -126,5 +131,38 @@ body {
 
   p {
     margin: 0 10px 0 0;
+  }
+}
+
+/* TAGS */
+
+.tags li {
+  display: inline-block;
+
+  .tag-size-5 {
+    font-size: 40px;
+    color: #AF7AC5;
+
+
+  }
+
+  .tag-size-4 {
+    font-size: 35px;
+    color: #5499C7;
+  }
+
+  .tag-size-3 {
+    font-size: 30px;
+    color: #58D68D;
+  }
+
+  .tag-size-2 {
+    font-size: 25px;
+    color: #5D6D7E;
+  }
+
+  .tag-size-1 {
+    font-size: 20px;
+    color: #F5B041;
   }
 }
