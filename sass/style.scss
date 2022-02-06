@@ -93,6 +93,7 @@ body {
   }
 }
 
+
 .list-horizontal {
   li {
     display: inline-block;
@@ -103,19 +104,15 @@ body {
 /* Authors */
 
 .authors {
-  li {
-    /* margin-bottom: 12px; */
+
+  a {
+    text-decoration: none;
+
+    span {
+      display: block;
+    }
   }
 }
-
-a {
-  text-decoration: none;
-
-  span {
-    display: block;
-  }
-}
-
 
 /* Post */
 
@@ -143,7 +140,11 @@ a {
 
 .tags li {
   display: inline-block;
-  padding-right: 10px;
+
+  a {
+    text-decoration: none;
+    padding-right: 10px;
+  }
 
   .tag-size-5 {
     font-size: 35px;
