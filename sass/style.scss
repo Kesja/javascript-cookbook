@@ -104,13 +104,18 @@ body {
 
 .authors {
   li {
-    /*margin-bottom: 12px;*/
+    /* margin-bottom: 12px; */
   }
 }
 
 a {
   text-decoration: none;
+
+  span {
+    display: block;
+  }
 }
+
 
 /* Post */
 
